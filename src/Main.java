@@ -7,25 +7,21 @@
 public class Main {
     public static void main(String[] args) {
 
-        int[] arr = {1, 2, 0, 4};
+        int[] arr = {1,2,0,4};
 
+        System.out.println("Начало работы");
         try {
-            System.out.println("Начало работы");
+       //     System.out.println(arr[5]);
+            System.out.println(arr[1]/arr[2]);
 
- //           System.out.println((arr[1] / arr[2]));
-            arr[5] = 8;
-            for (int num : arr) {
-                System.out.println(num);
-            }
-
-        } catch (ArithmeticException e) {
-            System.err.println(e + " ----  Операция деления на ноль !");
-        } catch (ArrayIndexOutOfBoundsException e1) {
-            System.err.println(e1 + " ----  Выход за пределы длины массива !");
+        } catch (ArrayIndexOutOfBoundsException | ArithmeticException e) {
+            System.out.println(e);
         }
         finally {
             System.out.println("завершение работы");
         }
+
+
     }
 }
 
